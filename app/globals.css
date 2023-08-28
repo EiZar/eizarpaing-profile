@@ -21,9 +21,13 @@
     margin: 20px !important;
   }
 
-  .flexContainer {
+  .profileContainer {
     flex-direction: column;
     align-items: flex-start !important;
+  }
+
+  .experienceContainter {
+    flex-direction: column;
   }
 
   .imgContainer {
@@ -31,6 +35,10 @@
   }
 
   .textContainer {
+    width: 100% !important;
+  }
+
+  .bgColor {
     width: 100% !important;
   }
 }
@@ -46,9 +54,14 @@ body {
   margin: 100px;
 }
 
-.flexContainer {
+.profileContainer {
   display: flex;
   align-items: center;
+}
+
+.experienceContainter {
+  display: flex;
+  align-items: flex-start;
 }
 
 .imgContainer {
@@ -90,17 +103,35 @@ h3 {
   margin-left: 50px;
 }
 
+.marginTop {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.marginBottom {
+  margin-bottom: 10px;
+}
+
+.leftContainer {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
 .title {
   font-size: 20px;
   font-weight: bold;
 }
 
 .title2 {
-  font-size: 20px;
+  font-size: 18px;
   color: gray;
 }
 
 .bgColor {
-  width: 200px;
+  width: 210px;
   background: #d8e6ed;
+}
+
+.iconText {
+  margin-left: 10px;
 }
