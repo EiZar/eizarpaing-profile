@@ -30,6 +30,10 @@
     flex-direction: column;
   }
 
+  .lanContainter {
+    width: 100% !important;
+  }
+
   .imgContainer {
     width: 100% !important;
   }
@@ -54,6 +58,14 @@ body {
   margin: 100px;
 }
 
+svg {
+  display: inline-block;
+}
+
+.fontColor {
+  color: #1e5c7b;
+}
+
 .profileContainer {
   display: flex;
   align-items: center;
@@ -62,6 +74,12 @@ body {
 .experienceContainter {
   display: flex;
   align-items: flex-start;
+}
+
+.lanContainter {
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
 }
 
 .imgContainer {
@@ -73,8 +91,8 @@ body {
 }
 
 img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   display: inline-block;
@@ -118,18 +136,19 @@ h3 {
 }
 
 .title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .title2 {
-  font-size: 18px;
+  font-size: 17px;
   color: gray;
 }
 
 .bgColor {
   width: 210px;
   background: #d8e6ed;
+  padding-left: 3px;
 }
 
 .iconText {

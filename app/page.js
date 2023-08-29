@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import Phone from './components/phone'
-import { FaPhoneAlt, FaRegEnvelope, FaHome } from 'react-icons/fa';
+import { 
+  FaPhoneAlt, FaRegEnvelope, FaHome, 
+  FaStar, FaRegStar, FaRegStarHalfStroke 
+} from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -11,10 +14,10 @@ export default function Home() {
       </div>
       <div className='inlineBlock textContainer'>
         <h1>Ei Zar Paing</h1>
-        <h2>Software Engineer</h2>
+        <h2 className='fontColor'>Software Engineer</h2>
         <p>Looking for a challenging role in a reputed company to utilize 
           my over 9 years of software engineering skills that can contribute to 
-          the company’s growth as well as enhance my knowledge by exploring new things.
+          the company’s growth as well as enhance my knowledge by exploring new technologies.
         </p>
       </div>
     </div>
@@ -59,14 +62,35 @@ export default function Home() {
         <h3 className='bgColor'>Languages</h3>
         <div className='leftContainer'>
           <ul class="list-disc">
-            <li>English</li>
-            <li>Japanese</li>
-            <li>Myanmar</li>
+            <li>
+              <div className='lanContainter'>
+                <div>Myanmar</div>
+                <div className='inlineBlock'>
+                <FaStar/><FaStar/><FaStar/><FaStar/><FaStar/>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className='lanContainter'>
+                <div>English</div>
+                <div className='inlineBlock'>
+                <FaStar/><FaStar/><FaStar/><FaRegStar/><FaRegStar/>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className='lanContainter'>
+                <div>Japanese</div>
+                <div className='inlineBlock'>
+                <FaStar/><FaStar/><FaRegStar/><FaRegStar/><FaRegStar/>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
       <div className='inlineBlock textContainer'>
-        <h2 className='bgColor'>Qualifications</h2>
+        <h3 className='bgColor'>Qualifications</h3>
         <div className='marginTop'>
           <h3>University of Computer Studies, Yangon</h3>
           <div className='title'>Master of Computer Science</div>
@@ -78,8 +102,8 @@ export default function Home() {
         </div>
         <h3 className='bgColor'>Work Experience</h3>
         <div className='marginTop'>
-          <div className='title'>Cloudsource</div>
-          <div className='title2'>Programmer (February 2020 to June 2023)</div>
+          <h3>Cloudsource <span className='title2'>(Tokyo, Japan)</span></h3>
+          <div className='title2'>Programmer (Feb 2020 to Jun 2023)</div>
           <ul class="list-disc">
             <li>Self-learning ReactJS. Developing Web Apps using React, 
               CSS and Firestore database.
@@ -96,8 +120,8 @@ export default function Home() {
           </ul>
         </div>
         <div className='marginTop'>
-          <div className='title'>Cloudsource</div>
-          <div className='title2'>Ruby on Rails Developer (October 2016 to January 2020)</div>
+          <h3>Cloudsource <span className='title2'>(Yangon, Myanmar)</span></h3>
+          <div className='title2'>Ruby on Rails Developer (Oct 2016 to Jan 2020)</div>
           <ul class="list-disc">
             <li>
               Self-learning Ruby on Rails. Developing Restful APIs and Web Apps by using Ruby on Rails.
@@ -111,8 +135,8 @@ export default function Home() {
           </ul>
         </div>
         <div className='marginTop'>
-          <div className='title'>Cloudsource</div>
-          <div className='title2'>Android Developer (July 2016 to September 2016)</div>
+          {/* <div className='title'>Cloudsource</div> */}
+          <div className='title2'>Android Developer (Jul 2016 to Sep 2016)</div>
           <ul class="list-disc">
             <li>
               Developing Android Mobile App by using Android and Firebase Realtime Database.
@@ -120,8 +144,8 @@ export default function Home() {
           </ul>
         </div>
         <div className='marginTop'>
-          <div className='title'>Fun and Learn Education Center</div>
-          <div className='title2'>Programmer Analyst (December 2013 to June 2016)</div>
+          <h3>Fun and Learn Education Center<span className='title2'>(Yangon, Myanmar)</span></h3>
+          <div className='title2'>Programmer Analyst (Dec 2013 to Jun 2016)</div>
           <ul class="list-disc">
             <li>
               Developing Web Apps using HTML, CSS and JavaScript.
