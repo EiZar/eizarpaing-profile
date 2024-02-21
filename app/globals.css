@@ -21,15 +21,6 @@
     margin: 20px !important;
   }
 
-  .profileContainer {
-    flex-direction: column;
-    align-items: flex-start !important;
-  }
-
-  .experienceContainter {
-    flex-direction: column;
-  }
-
   .lanContainter {
     width: 100% !important;
   }
@@ -69,11 +60,13 @@ svg {
 .profileContainer {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .experienceContainter {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .lanContainter {
@@ -96,6 +89,7 @@ img {
   border-radius: 50%;
   object-fit: cover;
   display: inline-block;
+  border: 3px solid #1e5c7b;
 }
 
 h1 {
@@ -153,4 +147,169 @@ h3 {
 
 .iconText {
   margin-left: 10px;
+}
+
+/* Flexbox */
+
+.firstFlex {
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+}
+
+.firstFlex div {
+  padding: 20px;
+  width: 200px;
+  /* flex-basis: 100px; */
+}
+
+.item1 {
+  background-color: red;
+  /* flex: 5; */
+  /* flex-basis: 200px; */
+  /* flex-grow: 1; */
+  flex-shrink: 2;
+  /* flex-basis: 150px; */
+}
+
+.item2 {
+  background-color: yellow;
+  /* flex: 1; */
+  /* flex-basis: 2; */
+  /* flex-grow: 1; */
+  flex-shrink: 5;
+  /* flex-basis: 300px; */
+}
+
+.item3 {
+  background-color: green;
+  /* flex: 3; */
+  /* flex-basis: 2; */
+  /* flex-grow: 1; */
+  flex-shrink: 1;
+  /* flex-basis: auto; */
+}
+
+.content {
+  display: flex;
+  /* justify-content: space-between; */
+  /* width: 500px; */
+}
+
+.content div {
+  flex-basis: 120px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.box {
+  flex-shrink: 1;
+}
+
+.box1 {
+  flex-shrink: 2;
+}
+
+.boxItem1 {
+  background-color:red;
+  order: 2;
+}
+
+.boxItem2 {
+  background-color:lightblue;
+  order: 5;
+}
+
+.boxItem3 {
+  background-color:yellow;
+  order: 4;
+}
+
+.boxItem4 {
+  background-color:brown;
+  order: 3;
+}
+
+.boxItem5 {
+  background-color:lightgreen;
+  order: 1;
+}
+
+.container {
+  display: flex;
+  background-color: beige;
+  /* justify-content: space-between; */
+}
+
+.item {
+  flex-grow: 1;
+  height: 100px;
+  /* width: 100px; */
+  width: 48%;
+  background-color: aqua;
+  margin-bottom: 2%;
+}
+
+.item-center { 
+  background-color: yellowgreen;
+  flex-grow: 3; /* Set the middle element to grow and stretch */
+}
+
+/* use a + selector to only add gaps between pairs of items */
+/* .item + .item {
+  margin-left: 2%;
+} */
+
+/* .item:nth-child(3n) {
+  width: 100%;
+} */
+
+/* .container {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: beige;
+}
+
+.item {
+  background-color: aqua;
+}
+
+.item:nth-child(3n+1) { order: 1; }
+.item:nth-child(3n+2) { order: 2; }
+.item:nth-child(3n)   { order: 3; }
+
+
+.container::before,
+.container::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+} */
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  /* Your container needs a fixed height, and it 
+   * needs to be taller than your tallest column. */
+  height: 600px; 
+}
+
+.item {
+  width: 32%;
+  margin-bottom: 2%; /* Optional */
+}
+
+/* Re-order items into 3 rows */
+.item:nth-child(3n+1) { order: 1; }
+.item:nth-child(3n+2) { order: 2; }
+.item:nth-child(3n)   { order: 3; }
+
+/* Force new columns */
+.container::before,
+.container::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
 }
